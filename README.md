@@ -2,7 +2,7 @@
 
 > **Audiencia:** Desarrolladores y administradores de base de datos Oracle  
 > **Nivel:** Intermedio  
-> **Duración estimada:** 90 minutos  
+> **Duración estimada:** 3 horas  
 > **Plataforma:** Oracle Cloud Infrastructure (OCI) — Región US Midwest (Chicago)
 
 ---
@@ -117,10 +117,10 @@ El Wallet contiene los certificados y cadenas de conexión necesarios para estab
 
 ![Database Connection - Download Wallet](./images/paso2_db_connection.png)
 
-**2.5** El sistema solicitará una contraseña para proteger el wallet. Utilice la siguiente:
+**2.5** El sistema solicitará una contraseña para proteger el wallet:
 
 ```
-CCSSlabs2026$$
+EjemploPass2026$$
 ```
 
 Ingrese la contraseña en ambos campos y haga clic en **Download**.
@@ -236,8 +236,6 @@ El **MCP Server** (Model Context Protocol) permite que Cline se comunique direct
   }
 }
 ```
-
-![MCP JSON Config](./images/paso5_mcp_json.png)
 
 > **Nota:** Verifique que la versión en la ruta (`26.1.2`) coincida con la versión de la extensión instalada en su equipo. Puede consultarla en **Extensions → Oracle SQL Developer → Details**.
 
