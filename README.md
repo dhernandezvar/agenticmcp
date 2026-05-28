@@ -523,21 +523,21 @@ SELECT AI narrate 'tu pregunta aquí';
 SELECT DBMS_CLOUD_AI.GENERATE(
   prompt       => 'TU PREGUNTA',
   action       => 'showsql',
-  profile_name => 'OCIGenAI_TUUSUARIO'
+  profile_name => 'OCIGenAI_PROF_<TUUSUARIO>'
 ) FROM dual;
 
 -- Ejecutar la consulta generada
 SELECT DBMS_CLOUD_AI.GENERATE(
   prompt       => 'TU PREGUNTA',
   action       => 'runsql',
-  profile_name => 'OCIGenAI_TUUSUARIO'
+  profile_name => 'OCIGenAI_PROF_<TUUSUARIO>'
 ) FROM dual;
 
 -- Respuesta en lenguaje natural
 SELECT DBMS_CLOUD_AI.GENERATE(
   prompt       => 'TU PREGUNTA',
   action       => 'narrate',
-  profile_name => 'OCIGenAI_TUUSUARIO'
+  profile_name => 'OCIGenAI_PROF_<TUUSUARIO>'
 ) FROM dual;
 ```
 
@@ -546,6 +546,9 @@ SELECT DBMS_CLOUD_AI.GENERATE(
 ### Paso 2.5: Consultas de prueba del laboratorio
 
 Utilice las siguientes preguntas de negocio para validar el funcionamiento de Select AI. Pruebe cada una con los tres modos disponibles (`showsql`, `runsql`, `narrate`):
+
+**Antes de ejecutar tus consultas, debes setear el profile en la sesión**
+EXEC DBMS_CLOUD_AI.set_profile('OCIGenAI_PROF_<TUUSUARIO>');
 
 **Consulta 1 — Listado de empleados activos**
 ```
