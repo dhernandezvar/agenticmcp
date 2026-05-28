@@ -443,16 +443,19 @@ El **AI Profile** es la configuración que conecta Select AI con el proveedor de
 ```sql
 BEGIN
   DBMS_CLOUD_AI.CREATE_PROFILE(
-    profile_name => 'OCIGenAI_<TUUSUARIO>',
+    profile_name => 'OCIGenAI_PROF_<TUUSUARIO>',
     attributes   => '{
       "provider":         "oci",
       "credential_name":  "GENAI_CRED_<TUUSUARIO>",
-      "region":           "us-ashburn-1",
+      "region":           "us-chicago-1",
       "model":            "xai.grok-4",
       "object_list": [
-        {"owner": "<TUUSUARIO>", "name": "INDICADORES_MACRO"},
-        {"owner": "<TUUSUARIO>", "name": "SISTEMA_BANCARIO"},
-        {"owner": "<TUUSUARIO>", "name": "TRANSACCIONES"}
+        {"owner": "<TUUSUARIO>", "name": "APORTACIONES"},
+        {"owner": "<TUUSUARIO>", "name": "EMPLEADOS"},
+        {"owner": "<TUUSUARIO>", "name": "PATRONOS"},
+        {"owner": "<TUUSUARIO>", "name": "PERIODOS_APORTACION"},
+        {"owner": "<TUUSUARIO>", "name": "RELACIONES_LABORALES"},
+        {"owner": "<TUUSUARIO>", "name": "TIPOS_APORTACION"}
       ]
     }'
   );
